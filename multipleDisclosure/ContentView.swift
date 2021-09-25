@@ -24,14 +24,16 @@ struct ContentView: View {
     var body: some View {
         List {
             ForEach(myList) { oneCountry in
-                Section(oneCountry.name) {
+                DisclosureGroup {
                     ForEach(oneCountry.animals) { oneAnimal in
                         Text("\(oneAnimal.name) \(oneAnimal.weight) pounds")
                     }
+                } label: {
+                    Text("\(oneCountry.name)")
+                        .font(.headline)
                 }
             }
         }
-        .listStyle(SidebarListStyle())
     }
 }
 
