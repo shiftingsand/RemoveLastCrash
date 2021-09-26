@@ -17,15 +17,15 @@ struct Country : Identifiable {
     let id = UUID()
     var name : String
     var animals : [Animals]
+    var expandMe = true
 }
 
 struct ContentView: View {
-    @State private var myList : [Country] = [Country(name: "USA", animals: [Animals(name: "Turtle", weight: 15), Animals(name: "Cat", weight: 8)]), Country(name: "Canada", animals: [Animals(name: "Moose", weight: 990), Animals(name: "Beaver", weight: 20)]), Country(name: "Germany", animals: [Animals(name: "Chamois", weight: 130), Animals(name: "European Badger", weight: 37)])]
-    @State private var expandMe = true
+    @Binding var myList : [Country]
     var body: some View {
         List {
-            ForEach(myList) { oneCountry in
-                DisclosureGroup(isExpanded: $expandMe) {
+            ForEach($myList) { $oneCountry in
+                DisclosureGroup(isExpanded: $oneCountry.expandMe) {
                     ForEach(oneCountry.animals) { oneAnimal in
                         Text("\(oneAnimal.name) \(oneAnimal.weight) pounds")
                     }
@@ -38,8 +38,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
