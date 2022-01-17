@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct multipleDisclosureApp: App {
+    @StateObject var allData = AllData()
     var body: some Scene {
         WindowGroup {
             Landing()
+                .environmentObject(allData)
         }
     }
 }

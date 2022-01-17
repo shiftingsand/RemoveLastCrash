@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct Animals : Identifiable {
-    let id = UUID()
-    var name : String
-    var weight : Int
-}
-
-struct Country : Identifiable {
-    let id = UUID()
-    var name : String
-    var animals : [Animals]
-    var expandMe = true
-}
-
 struct ContentView: View {
     @Binding var myList : [Country]
     var body: some View {
@@ -33,6 +20,16 @@ struct ContentView: View {
                     Text("\(oneCountry.name)")
                         .font(.headline)
                 }
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    print("hello")
+                } label: {
+                    Label("delet", systemImage: "trash")
+                }
+
             }
         }
     }

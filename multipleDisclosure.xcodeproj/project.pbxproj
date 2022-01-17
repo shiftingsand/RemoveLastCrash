@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96B390642795BE9D00480CDE /* AllData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B390632795BE9D00480CDE /* AllData.swift */; };
 		96D47BF826FE9E8800E9E150 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D47BF726FE9E8800E9E150 /* Landing.swift */; };
 		96F67CE426FE63C3000300AE /* multipleDisclosureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F67CE326FE63C3000300AE /* multipleDisclosureApp.swift */; };
 		96F67CE626FE63C3000300AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F67CE526FE63C3000300AE /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96B390632795BE9D00480CDE /* AllData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllData.swift; sourceTree = "<group>"; };
 		96D47BF726FE9E8800E9E150 /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
 		96F67CE026FE63C3000300AE /* multipleDisclosure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multipleDisclosure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F67CE326FE63C3000300AE /* multipleDisclosureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multipleDisclosureApp.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				96F67CE326FE63C3000300AE /* multipleDisclosureApp.swift */,
+				96B390632795BE9D00480CDE /* AllData.swift */,
 				96F67CE526FE63C3000300AE /* ContentView.swift */,
 				96D47BF726FE9E8800E9E150 /* Landing.swift */,
 				96F67CE726FE63D0000300AE /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 				96D47BF826FE9E8800E9E150 /* Landing.swift in Sources */,
 				96F67CE626FE63C3000300AE /* ContentView.swift in Sources */,
 				96F67CE426FE63C3000300AE /* multipleDisclosureApp.swift in Sources */,
+				96B390642795BE9D00480CDE /* AllData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
