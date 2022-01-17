@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var allData : AllData
+    
     @Binding var myList : [Country]
+    let theThing : UUID
+    
     var body: some View {
         List {
             ForEach($myList) { $oneCountry in
@@ -25,7 +29,7 @@ struct ContentView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    print("hello")
+                    allData.deleteThingByID(theUUID: theThing)
                 } label: {
                     Label("delet", systemImage: "trash")
                 }
