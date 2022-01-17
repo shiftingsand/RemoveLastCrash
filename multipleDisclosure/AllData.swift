@@ -38,7 +38,6 @@ final class AllData : ObservableObject {
             oneThing.id == theUUID
         }) {
             mainList.remove(at: foundThingIndex)
-            objectWillChange.send()
             print("deleted thing at index \(foundThingIndex)")
         } else {
             print("delete thing error ☠️")
@@ -52,7 +51,6 @@ final class AllData : ObservableObject {
         let tmpThing = Things(name: stringVal, theList: junk)
         
         mainList.append(tmpThing)
-        objectWillChange.send()
         print("appended thing")
     }
 }
