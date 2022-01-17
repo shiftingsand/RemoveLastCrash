@@ -19,6 +19,16 @@ struct Landing: View {
                     }
                 }
             }
+            .navigationTitle(Text("Things"))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        allData.addJunkData()
+                    } label: {
+                        Label("Add Thing", systemImage: "plus")
+                    }
+                }
+            }
         }
     }
 }

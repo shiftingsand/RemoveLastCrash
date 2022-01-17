@@ -44,6 +44,17 @@ final class AllData : ObservableObject {
             print("delete thing error ☠️")
         }
     }
+    
+    func addJunkData() {
+        let theFormatter = DateFormatter()
+        theFormatter.dateFormat = "MM-dd-y H:mm:ss"
+        let stringVal = theFormatter.string(from: Date())
+        let tmpThing = Things(name: stringVal, theList: junk)
+        
+        mainList.append(tmpThing)
+        objectWillChange.send()
+        print("appended thing")
+    }
 }
 
 let junk : [Country] = [Country(name: "USA", animals: [Animals(name: "Turtle", weight: 15), Animals(name: "Cat", weight: 8)]), Country(name: "Canada", animals: [Animals(name: "Moose", weight: 990), Animals(name: "Beaver", weight: 20)]), Country(name: "Germany", animals: [Animals(name: "Chamois", weight: 130), Animals(name: "European Badger", weight: 37)])]

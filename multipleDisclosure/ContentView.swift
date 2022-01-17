@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var allData : AllData
+    @Environment(\.dismiss) private var dismiss
     
     @Binding var myList : [Country]
     let theThing : UUID
@@ -31,9 +32,8 @@ struct ContentView: View {
                 Button {
                     allData.deleteThingByID(theUUID: theThing)
                 } label: {
-                    Label("delet", systemImage: "trash")
+                    Label("Delete Thing", systemImage: "trash")
                 }
-
             }
         }
     }
