@@ -12,8 +12,8 @@ struct Landing: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach($allData.mainList) { $oneList in
-                    NavigationLink(destination: ContentView(myList: $oneList.theList, theThing: oneList.id)) {
+                ForEach(allData.mainList) { oneList in
+                    NavigationLink(destination: ContentView(myList: oneList.theList, theThing: oneList.id)) {
                         Text("\(oneList.name)")
                             .padding()
                     }

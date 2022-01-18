@@ -11,13 +11,13 @@ struct ContentView: View {
     @EnvironmentObject var allData : AllData
     @Environment(\.dismiss) private var dismiss
     
-    @Binding var myList : [Country]
+    let myList : [Country]
     let theThing : UUID
     
     var body: some View {
         List {
-            ForEach($myList) { $oneCountry in
-                DisclosureGroup(isExpanded: $oneCountry.expandMe) {
+            ForEach(myList) { oneCountry in
+                DisclosureGroup(isExpanded: .constant(true)) {
                     ForEach(oneCountry.animals) { oneAnimal in
                         Text("\(oneAnimal.name) \(oneAnimal.weight) pounds")
                     }
